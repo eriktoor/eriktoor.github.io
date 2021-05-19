@@ -13,16 +13,16 @@
 
         <script>
 
-            // function makeToolTipVisible(time) {
+            function makeDropdownVisible(time) {
 
-            //     if (time > 0) {
-            //         document.getElementById("tooltipclick").style.visibility="visible"
-            //     }
+                if (time > 0) {
+                    document.querySelector("div.dropdown-content").style.display = 'block'
+                }
 
-            //     setTimeout(()=> {
-            //         document.getElementById("tooltipclick").style.visibility="hidden"
-            //     }, time*1000)
-            // }
+                setTimeout(()=> {
+                    document.querySelector("div.dropdown-content").style.display = 'none'
+                }, time*1000)
+            }
 
         </script>
 
@@ -47,19 +47,19 @@
                     </span>
                 </p>
                 <a href="mailto:evt8ed@virginia.edu" class="btn tooltip" >
-                    <i class="fa fa-envelope-o"></i>
+                    <i class="fa fa-envelope-o" onmouseover='makeDropdownVisible(0)'></i>
                     <span class="tooltiptext">hello@eriktoor.com</span>
                 </a>
                 <a href="http://linkedin.com/in/erik-toor-3337a3137/" class="btn tooltip" >
-                    <i class="fa fa-linkedin"></i>
+                    <i class="fa fa-linkedin" onmouseover='makeDropdownVisible(0)'></i>
                     <span class="tooltiptext">/in/erik-toor-3337a3137/</span>
                 </a>
-                <a href="http://github.com/eriktoor" class="btn tooltip" >
-                    <i class="fa fa-github-alt"></i>
+                <a href="http://github.com/eriktoor" class="btn tooltip">
+                    <i class="fa fa-github-alt" onmouseover='makeDropdownVisible(0)'></i>
                     <span class="tooltiptext">/ErikToor</span>
                 </a>
-                <div class="dropdown">
-                    <i class="fa fa-ellipsis-h dropbtn"></i>
+                <div class="dropdown" >
+                    <i class="fa fa-ellipsis-h dropbtn" onclick='makeDropdownVisible(5)'></i>
                     <div class="dropdown-content">
                         <a href="#">Leetcode Clone</a>
                         <a href="https://swipesfor.me">Swipes</a>
