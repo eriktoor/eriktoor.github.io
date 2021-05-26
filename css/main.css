@@ -150,7 +150,7 @@ body {
 	left: 50%;
 	/* bring your own prefixes */
 	transform: translate(-50%, -50%);
-	bottom: 0px;
+	bottom: 0;
 }
 
 .btn {
@@ -355,4 +355,9 @@ Tool Tip CSS
 		margin-left: 10px;
 		margin-right: 10px;
 	}*/
+	
+	.tooltip .tooltiptext {
+		width: 140px;
+		margin-left: -74px;
+	}
 }
