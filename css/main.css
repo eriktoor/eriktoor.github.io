@@ -54,6 +54,56 @@ body {
 }
 
 
+.optionsCard {
+    /*box-shadow: 0 4px 8px 0 rgba(0,0,0,0.25);*/
+    transition: 1.5s;
+    width: 400px;
+    /*height: 500px;*/
+	padding: 15px;
+    padding-bottom: 40px;
+    background-color: white;
+	/* overflow: hidden; */
+	display: none;
+	position: absolute;
+    border-radius: 1%;
+	z-index:10;
+	/* overflow-x: hidden; */
+    /* overflow-y: auto; */
+}
+
+.moreOptionsButton {
+	padding: 15px;
+    margin-top: 20px;
+    width: 100%;
+    font-size: 15px;
+    cursor: pointer;
+    bottom: 0px;
+    background-color: black;
+    color: white;
+    border: none;
+}
+
+.moreOptionsButton:active {
+	opacity: .7
+}
+
+.half-black {
+	background-color:black;
+	opacity: .45;
+	position: fixed;
+	top: -10px;
+	left: -10px;
+	width: 105%;
+	height: 105%;
+	display: none;
+	z-index: 5;
+  }
+  
+.options {
+	margin-top: 15px; 
+	margin-bottom: 15px;
+}
+
 .profile {
 	width: 90%;
 	/*height: 60%;*/
@@ -94,6 +144,15 @@ body {
 	transform: translate(-50%, -50%);
 }
 
+.centeredHorizontally {
+	position: fixed;
+	/* top: 50%; */
+	left: 50%;
+	/* bring your own prefixes */
+	transform: translate(-50%, -50%);
+	bottom: 0px;
+}
+
 .btn {
 	display: inline-block;
     color: #585657;
@@ -112,13 +171,35 @@ body {
 
 }
 
+
+/*
+Font Awesome Icon CSS
+*/
+
 .fa-linkedin:hover {
 	color: #0074b1;
+}
+
+.fa-play:hover {
+	color: #c4302b;
+}
+
+.fa-code:hover {
+	color: #fea116;
+}
+
+.fa-cutlery:hover {
+	color: #d63f36;
+}
+
+.fa-bullhorn:hover {
+	color: #29b470;
 }
 
 .fa-github-alt:hover {
 	color: black;
 }
+
 
 .fa-file-text-o:hover {
 	color: #4286f4;
@@ -144,6 +225,12 @@ a {
     text-decoration: none !important;
 
 } 
+
+
+
+/*
+Tool Tip CSS
+*/
 
 .tooltip {
     position: relative;
@@ -265,65 +352,3 @@ a {
 		margin-right: 10px;
 	}*/
 }
-
-
-.dropbtn {
-	color: #585657;
-	padding: 16px;
-	font-size: 16px;
-	border: none;
-	cursor: pointer;
-  }
-  
-  .dropdown {
-	position: relative;
-	display: inline-block;
-	z-index: 1
-  }
-  
-  .dropdown-content {
-	display: none;
-	position: absolute;
-	background-color: #f9f9f9;
-	border-radius: 1%;
-	min-width: 160px;
-	height: auto;
-	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-	z-index: 1;
-	left: 50% !important;
-        right: auto !important;
-        text-align: center !important;
-        transform: translate(-50%, 0) !important;
-  }
-  
-  .dropdown-content a {
-	color: black;
-	padding: 12px 16px;
-	text-decoration: none;
-	display: block;
-	z-index: 1;
-
-  }
-  
-  .dropdown-content a:hover {background-color: #f1f1f1}
-  
-  .dropdown:hover .dropdown-content {
-	display: block;              
-	z-index: 1;
-
-  }
-  
-  .dropdown:hover .dropbtn {
-	color: black;
-	z-index: 1;
-
-  }
-
-
-  #moreoptions {
-	  cursor: pointer
-  }
-
-  #moreoptions:hover {
-	  color: black
-  }
