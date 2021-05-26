@@ -272,6 +272,10 @@ Tool Tip CSS
 	.card {
 		width: 80%;
 	}
+	
+	.optionsCard {
+		width: 80%;
+	}
 
 	.profile{
 		width: 90%;
