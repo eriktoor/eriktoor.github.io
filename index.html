@@ -13,22 +13,19 @@
 
         <script>
 
-            function makeDropdownVisible(time) {
 
-                if (time > 0) {
-                    document.querySelector("div.dropdown-content").style.display = 'block'
-                } else if (time == 0 && document.querySelector("div.dropdown-content").style.display == 'none') {
-                    return 
+            function toggleOptions() {
+                if (document.querySelector("div.optionsCard").style.display == 'block' ) {
+                    document.querySelector("div.optionsCard").style.display ='none'
+                    document.querySelector("div.half-black").style.display = 'none'
+                } else {
+                    document.querySelector("div.optionsCard").style.display = 'block'
+                    document.querySelector("div.half-black").style.display = 'block'
+
                 }
-            
-
-                setTimeout(()=> {
-                    document.querySelector("div.dropdown-content").style.display = 'none'
-                }, time*1000)
             }
 
         </script>
-
 
     </head>
     <body>
@@ -50,37 +47,94 @@
                     </span>
                 </p>
                 <a href="mailto:evt8ed@virginia.edu" class="btn tooltip" >
-                    <i class="fa fa-envelope-o" onmouseover='makeDropdownVisible(0)'></i>
+                    <i class="fa fa-envelope-o" ></i>
                     <span class="tooltiptext">hello@eriktoor.com</span>
                 </a>
                 <a href="http://linkedin.com/in/erik-toor-3337a3137/" class="btn tooltip" >
-                    <i class="fa fa-linkedin" onmouseover='makeDropdownVisible(0)'></i>
+                    <i class="fa fa-linkedin" ></i>
                     <span class="tooltiptext">/in/erik-toor-3337a3137/</span>
                 </a>
                 <a href="http://github.com/eriktoor" class="btn tooltip">
-                    <i class="fa fa-github-alt" onmouseover='makeDropdownVisible(0)'></i>
+                    <i class="fa fa-github-alt" ></i>
                     <span class="tooltiptext">/ErikToor</span>
                 </a>
-                <div class="dropdown" >
-                    <i class="fa fa-ellipsis-h dropbtn" onclick='makeDropdownVisible(5)'></i>
-                    <div class="dropdown-content">
-                        <a href="#">Leetcode Clone</a>
-                        <a href="https://swipesfor.me">Swipes</a>
-                        <a href="https://DMVRank.com">DMVRank</a>
-                    </div>
-                  </div>
 
-                <!-- <a class="btn tooltip" onclick='makeToolTipVisible(5)' onmouseover='makeToolTipVisible(3)' >
-                    <i class="fa fa-ellipsis-h"></i>
-                    <span class="tooltiptext" id="tooltipclick">
-                        <p id="moreoptions" >Leetcode Clone</p>
-                        <p id="moreoptions">Swipes</p>
-                        <p id="moreoptions">DMVRank</p>
-                    </span>
-                </a> -->
+                <a href="#" class="btn tooltip">
+                    <i class="fa fa-ellipsis-h" id="toggleDropdown" onclick='toggleOptions()'></i>
+                    <span id="toggleDropdownText" class="tooltiptext">See More</span>
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="optionsCard centeredHorizontally" >
+            <div class="container">
+
+                <p style="font-size: 18px; font-weight: 800">
+                    More Options 
+                </p>
+
+
+                <div style="border-top: solid 1px; border-color: gray">
+
+                    <a href="mailto:evt8ed@virginia.edu" class="btn tooltip options" >
+                        <i class="fa fa-envelope-o" ></i>
+                        <span class="tooltiptext">hello@eriktoor.com</span>
+                    </a>
+                    <a href="http://linkedin.com/in/erik-toor-3337a3137/" class="btn tooltip options" >
+                        <i class="fa fa-linkedin" ></i>
+                        <span class="tooltiptext">/in/erik-toor-3337a3137/</span>
+                    </a>
+                    <a href="http://github.com/eriktoor" class="btn tooltip options">
+                        <i class="fa fa-github-alt" ></i>
+                        <span class="tooltiptext">/ErikToor</span>
+                    </a>
+    
+
+                    <a href="http://github.com/eriktoor" class="btn tooltip options">
+                        <i class="fa fa-code" ></i>
+                        <span class="tooltiptext">/Leetcode-Clone</span>
+                    </a>
+
+                    <a href="https://Swipesfor.me/" class="btn tooltip options">
+                        <i class="fa fa-cutlery" ></i>
+                        <span class="tooltiptext">/Swipes</span>
+                    </a>
+
+
+                    <a href="https://DMVRank.com/" class="btn tooltip options">
+                        <i class="fa fa-bullhorn" ></i>
+                        <span class="tooltiptext">/DMVRank</span>
+                    </a>
+
+                    <a href="https://www.youtube.com/user/TEDBET622" class="btn tooltip options">
+                        <i class="fa fa-play" ></i>
+                        <span class="tooltiptext">/Youtube</span>
+                    </a>
+
+
+                    <a href="https://DMVRank.com/" class="btn tooltip options">
+                        <i class="fa fa-archive" ></i>
+                        <span class="tooltiptext">/Article</span>
+                    </a>
+
+
+              </div>
+
+              <button class="moreOptionsButton" onClick="toggleOptions()">Close</button>
 
             </div>
         </div>
+
+
+        <div class="half-black"></div>
+
+
+
+
     </body>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </html>
