@@ -21,14 +21,18 @@
                 } else {
                     document.querySelector("div.optionsCard").style.display = 'block'
                     document.querySelector("div.half-black").style.display = 'block'
-
+                    locateMoreOptionsInRightPlace()
                 }
+            }
+            
+            function locateMoreOptionsInRightPlace() {
+                document.querySelector("div.centeredHorizontally").style.bottom = (window.innerHeight - document.querySelector("div.card").offsetHeight) / 2 
             }
 
         </script>
 
     </head>
-    <body>
+    <body onresize="locateMoreOptionsInRightPlace()">
         <div class="card centered fadeInLoad" >
             <div class="container">
                 <img src="./images/headshot.jpg" class="profile"></img>
