@@ -301,6 +301,10 @@ Tool Tip CSS
 		margin-left: 15px;
 		margin-right: 15px;
 	}*/
+	.tooltip .tooltiptext {
+		width: 140px;
+		margin-left: -74px;
+	}
 }
 
 @media (max-height:500px) {
@@ -356,8 +360,4 @@ Tool Tip CSS
 		margin-right: 10px;
 	}*/
 	
-	.tooltip .tooltiptext {
-		width: 140px;
-		margin-left: -74px;
-	}
 }
